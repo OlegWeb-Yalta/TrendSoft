@@ -1,0 +1,110 @@
+//переменные
+
+$main_color: #F83718;
+
+//стили
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+}
+.WrapperAll{
+    margin: 0 100px;
+}
+.navigation{
+    margin-top: 25px;
+    text-transform: uppercase;
+    font: 700 14px 'Ubuntu';
+    &_menu{
+        display: flex;
+        gap: 160px;
+        margin: 0 30px;
+        &-item{
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+    }
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: $main_color;
+    margin-top:25px;
+    &_text{
+        color: white;
+        width: 580px;
+        
+        &-title{
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+        }
+        &-main{
+            margin-top: 30px;
+            font-size: 16px;
+        }
+    }
+    &_img{
+        margin: 87px 0;
+    }
+}
+.main{
+    margin: 100px 0 0 0;
+
+    &_title{
+        line-height: 48px;
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: 700;
+        text-align: center;
+        span{
+            color: $main_color;
+        }
+    }
+    &_subtitle{
+        text-align: center;
+    }
+    &_icon{
+        &_list{
+            text-align: center;
+            margin-top: 70px;
+            li{
+                padding-top: 120px;
+               display: inline-block;
+               width: 276px;
+               h1{
+                color:$main_color;
+                font-size: 40px;
+                font-weight: 700;
+               }
+               span{
+                    font-size: 26px;
+                    font-weight: 300;
+                    line-height: 39px;
+               }
+            }
+        }
+        &-users{
+            background: url("../img/icon/users.png") no-repeat center top;
+        }
+        &-projects{
+            background: url("../img/icon/projects.png") no-repeat center top;
+        }
+        &-years{
+            background: url("../img/icon/years_market.png") no-repeat center top;
+        }
+        
+    }
+    &_PlanningModule{
+        display: flex;
+    }
+}
