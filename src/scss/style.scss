@@ -2,6 +2,20 @@
 
 $main_color: #F83718;
 
+
+// миксин
+
+@mixin main_btn{
+    width: 148px;
+    height: 35px;
+    background:$main_color ;
+    color:white;
+    font-family: Ubuntu;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+}
+
 //стили
 *{
     margin: 0;
@@ -11,6 +25,9 @@ $main_color: #F83718;
         text-decoration: none;
         color: #000;
     }
+}
+.container{
+    margin: 0 378px;
 }
 .WrapperAll{
     margin: 0 100px;
@@ -33,7 +50,7 @@ $main_color: #F83718;
 .about{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center ;
     padding: 0 30px;
     background: $main_color;
     margin-top:25px;
@@ -106,5 +123,33 @@ $main_color: #F83718;
     }
     &_PlanningModule{
         display: flex;
+        align-items: center;
+        gap: 60px;
+        &_text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            &-btn{
+                @include main_btn;
+            }
+        }
+    }
+    &_BudgetModule{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 60px;
+        img{
+            width: 540px;
+        }
+        &_text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+            &-btn{
+                @include main_btn;
+            }
+        }
     }
 }
